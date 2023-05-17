@@ -33,6 +33,16 @@
         let extraProductPackage = undefined // Team did not purchase a package
         extraProductPackage = extraProductPackage || "None" // results in "None" since extraProductPackage is falsy
 
+        // let teamCount = 6
+        // let averageMileTimeInMinutes = 6.5
+
+        // let isTeamRunnerCountSufficient = (averageMileTimeInMinutes < 7 && teamCount >= 6) || (averageMileTimeInMinutes >= 7 && teamCount >= 12) // the averageMileTimeInMinutes is under 7 and the team has at least 6 runners, so this evaluates to true
+
+        let teamCount = 8
+        let averageMileTimeInMinutes = 10
+
+        let isTeamRunnerCountSufficient = (averageMileTimeInMinutes < 7 && teamCount >= 6) || (averageMileTimeInMinutes >= 7 && teamCount >= 12)  // the averageMileTimeInMinutes is over 7, but the team has fewer than 12 runners, so this evaluates to false
+
         // !true // evaluates to false
         // !false // evaluates to true
         // !"Hello" // evaluates to false
