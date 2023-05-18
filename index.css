@@ -1,7 +1,19 @@
 body {
+    border: dashed 1px red;
     background-color: antiquewhite;
+    padding: 1%;
+    text-align: center;
 }
 
-#headerText {
-    color: blueviolet
+.header-text {
+    color: blueviolet;
+    border: dashed 2px black;
+    margin: auto;
+    width: 75%;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+h3 {
+    color: red;
 }
