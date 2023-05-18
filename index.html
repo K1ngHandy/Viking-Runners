@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viking Runners</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1 id="headerText">Viking Runners</h1>
@@ -26,6 +27,7 @@
         let teamRunnerCount = 8
 
         let isTeamCheckedIn = teamName && teamHasPaid && (teamRunnerCount > 0) && (teamRunnerCount <= 12) // evaluates to true if all conditions are truthy
+        let shouldShowProgressBar = !isTeamCheckedIn
 
         // let isTeam1NameValid = Boolean(team1.name) // isTeam1NameValid will be true because 'Team Warriors' is truthy
         // let isTeam2NameValid = Boolean(team2.name) // isTeam2NameValid will bee false because '' is falsy
@@ -47,9 +49,6 @@
         // !false // evaluates to true
         // !"Hello" // evaluates to false
         // !null // evaluates to true
-
-        // let isTeamCheckedIn = false
-        let shouldShowProgressBar = !isTeamCheckedIn
     </script>
 </body>
 </html>
