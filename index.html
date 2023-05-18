@@ -10,6 +10,9 @@
 <body>
     <h1 id="headerText">Viking Runners</h1>
     <h3 id="subtitle">Teams:</h3>
+    <p id="teamName"></p>
+    <p id="teamCount">Count: </p>
+
     <script>
         numberOfRunnersForTeam1 = 5
         numberOfRunnersForTeam2 = 0
@@ -22,7 +25,7 @@
         // team1.name = 'Team Warriors'
         // team2.name = ''
 
-        let teamName = "Weekend Warriors"
+        let teamName = "Weekend Warriors"; document.getElementById('teamName').innerHTML = teamName
         let teamHasPaid = true
         let teamRunnerCount = 8
 
@@ -40,8 +43,19 @@
 
         // let isTeamRunnerCountSufficient = (averageMileTimeInMinutes < 7 && teamCount >= 6) || (averageMileTimeInMinutes >= 7 && teamCount >= 12) // the averageMileTimeInMinutes is under 7 and the team has at least 6 runners, so this evaluates to true
 
-        let teamCount = 8
+        let teamCount = 8; document.getElementById('teamCount').innerHTML = teamCount
         let averageMileTimeInMinutes = 10
+
+        if (teamCount < 8) {
+            console.log('Not a full team')
+        } else {
+            
+        }
+
+        let name = ''
+        if (!name) {
+            console.log('Please update runner name')
+        }
 
         let isTeamRunnerCountSufficient = (averageMileTimeInMinutes < 7 && teamCount >= 6) || (averageMileTimeInMinutes >= 7 && teamCount >= 12)  // the averageMileTimeInMinutes is over 7, but the team has fewer than 12 runners, so this evaluates to false
 
