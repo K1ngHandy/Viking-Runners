@@ -64,12 +64,24 @@
       if (!name) {
         document.getElementById("name").innerHTML = "Please update name.";
       } else {
-        document.getElementById("name").innerHTML = `Name: ${name}`;
+        document.getElementById("name").innerHTML = `Name: ' + name;
       }
 
       let isTeamRunnerCountSufficient =
         (averageMileTimeInMinutes < 7 && teamCount >= 6) ||
         (averageMileTimeInMinutes >= 7 && teamCount >= 12); // the averageMileTimeInMinutes is over 7, but the team has fewer than 12 runners, so this evaluates to false
+
+        let oldestAge = 17 // junior division team
+        let youngestAge = 16
+        let teamDivision
+
+        if (oldestAge < 18) {
+          teamDivision = 'junior'
+        } else if (youngestAge < 40) {
+          teamDivision = 'open'
+        } else {
+          teamDivision = 'master'
+        }
 
       // !true // evaluates to false
       // !false // evaluates to true
