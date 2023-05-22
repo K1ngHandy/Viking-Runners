@@ -1,5 +1,5 @@
 body {
-    border: dashed 1px red;
+    /* border: dashed 1px red; */
     background-color: antiquewhite;
     padding: 1%;
     text-align: center;
@@ -7,7 +7,7 @@ body {
 
 .header-text {
     color: blueviolet;
-    border: dashed 2px black;
+    /* border: dashed 2px black; */
     margin: auto;
     width: 75%;
     padding-top: 2px;
