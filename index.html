@@ -13,7 +13,7 @@
     </div>
     <div id="content">
       <h2 class="header-text">Teams:</h2>
-      <h3 id="teamName"></h4>
+      <h3 id="teamName"></h3>
       <p id="name"></p>
       <p id="teamRunnerCount"></p>
     </div>
@@ -51,37 +51,50 @@
 
       // let isTeamRunnerCountSufficient = (averageMileTimeInMinutes < 7 && teamCount >= 6) || (averageMileTimeInMinutes >= 7 && teamCount >= 12) // the averageMileTimeInMinutes is under 7 and the team has at least 6 runners, so this evaluates to true
 
+      // let teamCount = 8;
+      // let averageMileTimeInMinutes = 10;
+
+      // if (teamCount < 8) {
+      //   console.log("Not a full team");
+      // } else {
+      // }
+
+      // Advanced logical expressions
       let teamCount = 8;
       let averageMileTimeInMinutes = 10;
 
-      if (teamCount < 8) {
-        console.log("Not a full team");
+      if (averageMileTimeInMinutes < 7) {
+        if (teamCount < 6) {
+          console.log("Inform the team that they are not a full team.");
+        } else {
+          console.log("This is a full team. Move onto the next step");
+        }
       } else {
+        if (teamCount < 12) {
+          console.log("Inform the team that they are not a full team");
+        } else {
+          console.log("This is a full team. Move onto the next step.");
+        }
       }
 
       let name = "";
-      name = "Runner";
       if (!name) {
         document.getElementById("name").innerHTML = "Please update name.";
       } else {
-        document.getElementById("name").innerHTML = `Name: ' + name;
+        document.getElementById("name").innerHTML = "Name: " + name;
       }
 
-      let isTeamRunnerCountSufficient =
-        (averageMileTimeInMinutes < 7 && teamCount >= 6) ||
-        (averageMileTimeInMinutes >= 7 && teamCount >= 12); // the averageMileTimeInMinutes is over 7, but the team has fewer than 12 runners, so this evaluates to false
+      let oldestAge = 17; // junior division team
+      let youngestAge = 16;
+      let teamDivision;
 
-        let oldestAge = 17 // junior division team
-        let youngestAge = 16
-        let teamDivision
-
-        if (oldestAge < 18) {
-          teamDivision = 'junior'
-        } else if (youngestAge < 40) {
-          teamDivision = 'open'
-        } else {
-          teamDivision = 'master'
-        }
+      if (oldestAge < 18) {
+        teamDivision = "junior";
+      } else if (youngestAge < 40) {
+        teamDivision = "open";
+      } else {
+        teamDivision = "master";
+      }
 
       // !true // evaluates to false
       // !false // evaluates to true
